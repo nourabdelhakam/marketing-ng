@@ -1,0 +1,17 @@
+.app-header{
+    right: 0;
+}
+.app-navbar{
+    z-index: 100;
+    position: absolute;
+}
+.mat-toolbar{
+    background: transparent;
+    z-index: 100;
+    position: absolute;
+}
+    .mat-toolbar-row{
+        padding-top: 30px;
+        justify-content: space-around;
+    }
+  

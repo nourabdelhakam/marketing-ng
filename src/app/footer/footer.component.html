@@ -1,0 +1,98 @@
+<section class="footer-section">
+    <div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh; padding: 0 5%;">
+        <div fxLayout="row">
+            <!-- <app-form></app-form> -->
+
+            <div class="sub-form">
+                <form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
+              
+                  <h1>Do you Want to get <strong>Special News?</strong></h1>
+                  <div class="form-content">
+                    <label>                      
+                        <input type="email" formControlName="email"  >
+                    </label>
+                    <div *ngIf="subscribeForm.controls.email.invalid && (subscribeForm.controls.email.dirty || subscribeForm.controls.email.touched)"
+                            class="alert alert-danger">
+
+                        <div *ngIf="subscribeForm.controls.email.errors.required">
+                            email is required.
+                        </div>
+                        <div *ngIf="subscribeForm.controls.email.errors.email">
+                            Incorrect email.
+                        </div>
+                        
+
+                        </div>
+                    <button class="btn" type="submit" [disabled]="!subscribeForm.valid">Subscribe</button>
+                  </div>
+                  
+                </form>
+            </div>
+        </div>
+        <div class="footer" fxLayout="row wrap" fxLayoutAlign="space-around center" style=" padding: 0 8%;" >
+            
+            <!-- <div fxFlex="30" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" style="padding: 3%;">
+                <mat-card>
+                    <h3>LOGO.</h3>
+                    <h4>Stay In Touch</h4>
+                    <ul>
+                        <li>1</li>
+                        <li>1</li>
+                        <li>1</li>
+                        <li>1</li>
+                    </ul>
+                </mat-card>
+            </div>
+            <div fxFlex="20" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column">
+                <mat-card>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li>About</li>
+                        <li>Home</li>
+                        <li>Pricing</li>
+                        <li>Location</li>
+                        <li>Office</li>
+                    </ul>
+                </mat-card>
+            </div>
+            <div fxFlex="30" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column">
+                <h3>Hours</h3>
+                <table mat-table [dataSource]="dataSource">
+                    <tbody>
+                        <ng-container>
+                            <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+                            <mat-cell *matCellDef="let element"> fffffffff</mat-cell>
+                        </ng-container>
+                        <ng-container >
+                            <th mat-header-cell > No. </th>
+                            <td mat-cell > Monday: </td>
+                            <td mat-cell > tuesday: </td>
+                            <td mat-cell > wednesday: </td>
+                            <td mat-cell > thursday: </td>
+                            <td mat-cell > Friday: </td>
+                        </ng-container>
+                        <ng-container >
+                            <th mat-header-cell > No. </th>
+                            <td mat-cell > 9:00 - 18:00 </td>
+                            <td mat-cell > 9:00 - 18:00 </td>
+                            <td mat-cell > 9:00 - 18:00 </td>
+                            <td mat-cell > 9:00 - 18:00 </td>
+                            <td mat-cell > 9:00 - 18:00 </td>
+                        </ng-container>
+                    </tbody>
+                </table>
+            </div>
+            <div fxFlex="20" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column">
+                <mat-card>
+                    <h3>Contact</h3>
+                    <ul>
+                       <li>d</li>
+                       <li>a</li>
+                       <li>d</li>
+                    </ul>
+                </mat-card>
+            </div> -->
+        </div>
+    </div>
+    
+</section>

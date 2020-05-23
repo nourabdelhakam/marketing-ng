@@ -1,0 +1,28 @@
+.prices-section {
+    background-color: #EFF0F1;
+    
+
+    .heading {
+        text-align: center;
+        margin-top: 3%;
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    mat-card {
+
+        border-radius: 25px;
+    flex-direction: column;
+    // align-items: stretch;
+    height: 100%;
+    display: flex;
+
+        // padding: 13%;
+    
+  
+    text-align: center;
+    .content {
+        height: 100%;
+    }
+    }
+}

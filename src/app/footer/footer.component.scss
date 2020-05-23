@@ -1,0 +1,28 @@
+.footer  {
+    background: url('../../assets/imgs/Mask\ Group\ 1.svg') no-repeat;
+    background-size: cover;
+}
+.sub-form {
+    margin: 0 auto;
+
+    .form-content {
+        display: inline-flex;
+        width: fit-content;
+    }
+
+    input {
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        font-size: 1.2rem;
+        // margin: 0 auto; 
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+         background-color: #b0b0b029; 
+        border: none; 
+        margin-right: 7px;
+        /* width: 90%; */
+        // display: block;
+        /* border-bottom: 0.3rem solid transparent; */
+        /* transition: all 0.3s; */
+    }
+}

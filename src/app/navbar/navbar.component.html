@@ -1,0 +1,36 @@
+<div >
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <span><img src="../../assets/imgs/Group 1541.svg" alt="logo" width="100%"></span>
+  
+    
+        <div  class="nav" fxShow="true" fxHide.lt-md="true">
+          
+          <a href="#" mat-button>HOME</a>
+          <a href="#" mat-button>SERVICES</a>
+          <a href="#" mat-button>PRICES</a>
+          <a href="#" mat-button>CONTACT</a>
+        </div>
+    
+        <div fxShow="true" fxHide.gt-sm="true">
+          <a href="#" (click)="sidenav.toggle()"><span class="material-icons">menu</span></a>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  
+    <mat-sidenav-container fxFlexFill  fxShow="true" fxHide.gt-sm="true" class="example-container">
+      <mat-sidenav #sidenav fxLayout="column">
+        <div fxLayout="column">
+          <a (click)="sidenav.toggle()" href="#" mat-button>Close</a>
+          <a href="#" mat-button>HOME</a>
+          <a href="#" mat-button>SERVICES</a>
+          <a href="#" mat-button>PRICES</a>
+          <a href="#" mat-button>CONTACT</a>
+        </div>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill>Main content</mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+
+
+
