@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,5 +11,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  @HostListener('window:scroll', ['$event'])
+  onScroll(e) {
+    const scrollOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    console.log(e);
+  }
 }

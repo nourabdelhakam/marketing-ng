@@ -1,10 +1,9 @@
-<div class="navbar" style="height: 100vh;" (scroll)="onWindowScroll($event);">
-  <mat-toolbar >
+  <mat-toolbar class="transparent" [style.background]="backGroundOpacity" [class.nontrans] = "scrolled">
     <mat-toolbar-row>
       
-      <span><img src="../../assets/imgs/Group 1541.svg" alt="logo" width="60%"></span>
+      <span><img src="../../assets/imgs/Group 1541.svg" alt="logo" class="logo" width="60%"></span>
       <span class="example-spacer"></span>
-      <div fxShow="true" fxHide.lt-md="true" style="color: #ffffff;">
+      <div fxShow="true" fxHide.lt-md="true"  [style.color]="menuText" class="menu-item ">
         <!-- The following menu items will be hidden on both SM and XS screen sizes -->
         <a href="#" mat-button>
           HOME
@@ -46,12 +45,11 @@
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
-      <div fxLayout="column" fxFlexFill>
-      <app-header class="app-header"></app-header>
-      <app-about></app-about>
+      <div fxLayout="column" fxFlexFill >
+      <app-header class="app-header" ></app-header>
+      <app-about ></app-about>
       <app-service [deviceXs]="deviceXs"></app-service>
       <app-prices></app-prices>
       <app-footer></app-footer>
     </div></mat-sidenav-content>
   </mat-sidenav-container>
-</div>
