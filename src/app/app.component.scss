@@ -1,10 +1,11 @@
-.app-header{
-    right: 0;
-}
 .app-navbar{
     z-index: 100;
     position: absolute;
 }
+.app-header{
+    right: 0;
+}
+
 .navbar {
     height: 100vh;
 }
@@ -30,9 +31,7 @@
     }
 }
 
-.navbar.text-smaller {
-    background: red;
-}
+
   
 .transparent {
     background: transparent;

@@ -48,13 +48,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
     if (scrollOffset >= 100) {
       document.querySelectorAll('.navbar').forEach((c) => {
-        // c.classList.add('text-smaller');
         c.classList.remove('transparent');
       });
     } else {
       document.querySelectorAll('.navbar').forEach((c) => {
         c.classList.add('transparent');
-        // c.classList.remove('text-smaller');
       });
     }
   }

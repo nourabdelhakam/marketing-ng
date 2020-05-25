@@ -1,52 +1,25 @@
 <section class="footer-section">
-    <div fxFlex fxLayout="column" fxLayoutGap="10px" style=" padding: 0 5%;">
+    <div  fxLayout="column" fxLayoutGap="10px">
         <div fxLayout="row" fxFlexFill>
-            <!-- <app-form></app-form> -->
-
             <div class="sub-form">
                 <form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
-              
                   <p>Do you Want to get <strong>Special News?</strong></p>
-                  
-                    <div class="form-content">
-                        
-                            
-                                <label>                      
-                                    <input type="email" formControlName="email"  >
-                                </label>
-                            
-                            
-                                <button class="btn" type="submit" [disabled]="!subscribeForm.valid">Subscribe</button>
-                           
-                       
-                        
-                        
-                        
-    
+                    <div fxLayout="row" fxLayout.xs="column" class="form-content">
+                        <label>                      
+                            <input type="email" formControlName="email" placeholder="Drop your Email">
+                        </label>
                         <div *ngIf="subscribeForm.controls.email.invalid && (subscribeForm.controls.email.dirty || subscribeForm.controls.email.touched)"
-                                class="alert alert-danger">
-    
-                            <div *ngIf="subscribeForm.controls.email.errors.required">
-                                email is required.
-                            </div>
-                            <div *ngIf="subscribeForm.controls.email.errors.email">
-                                Incorrect email.
-                            </div>
-                            
-    
-                            </div>
-                      </div>
-                  
-                  
-                  
-                  
+                        class="alert alert-danger">
+                            <div *ngIf="subscribeForm.controls.email.errors.required">E-mail is Required.</div>
+                            <div *ngIf="subscribeForm.controls.email.errors.email">Incorrect E-mail.</div>
+                        </div>
+                        <button class="btn" type="submit" [disabled]="!subscribeForm.valid">Subscribe</button>
+                        
+                      </div>          
                 </form>
             </div>
         </div>
-        <div class="footer" fxLayout="row wrap" fxLayoutAlign="space-around center" style=" padding: 0 8%;" >
-            
-           
-        </div>
+
+        <div class="footer" fxLayout="row wrap" fxLayoutAlign="space-around center" style=" padding: 0 8%;"></div>
     </div>
-    
 </section>

@@ -1,22 +1,12 @@
   <mat-toolbar class="transparent" [style.background]="backGroundOpacity" [class.nontrans] = "scrolled">
     <mat-toolbar-row>
-      
       <span><img src="../../assets/imgs/Group 1541.svg" alt="logo" class="logo" width="60%"></span>
       <span class="example-spacer"></span>
       <div fxShow="true" fxHide.lt-md="true"  [style.color]="menuText" class="menu-item ">
-        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
-        <a href="#" mat-button>
-          HOME
-        </a>
-        <a href="#" mat-button>
-          SERVICES
-        </a>
-        <a href="#" mat-button>
-          PRICES
-        </a>
-        <a href="#" mat-button>
-          CONACT
-        </a>
+        <a href="#" mat-button>HOME</a>
+        <a href="#" mat-button>SERVICES</a>
+        <a href="#" mat-button>PRICES</a>
+        <a href="#" mat-button>CONTACT</a>
       </div>
       <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
         <mat-icon>menu</mat-icon>
@@ -27,27 +17,20 @@
   <mat-sidenav-container fxFlexFill>
     <mat-sidenav mode="push" position="end" #sidenav>
       <mat-nav-list>
-        <a href="#" mat-list-item>
-          HOME
-        </a>
-        <a href="#" mat-list-item>
-          SERVICES
-        </a>
-        <a href="#" mat-list-item>
-          PRICES
-        </a>
-        <a href="#" mat-list-item>
-          CONTACT
-        </a>
+        <a href="#" mat-list-item>HOME</a>
+        <a href="#" mat-list-item>SERVICES</a>
+        <a href="#" mat-list-item>PRICES</a>
+        <a href="#" mat-list-item>CONTACT</a>
         <a (click)="sidenav.toggle()" mat-list-item>
           <mat-icon>close</mat-icon> Close
         </a>
       </mat-nav-list>
     </mat-sidenav>
+
     <mat-sidenav-content fxFlexFill>
-      <div fxLayout="column" fxFlexFill >
+      <div fxLayout="column" fxLayoutGap="4%" fxFlexFill >
       <app-header class="app-header" ></app-header>
-      <app-about ></app-about>
+      <app-about></app-about>
       <app-service [deviceXs]="deviceXs"></app-service>
       <app-prices></app-prices>
       <app-footer></app-footer>
